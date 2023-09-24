@@ -5,14 +5,12 @@ node ('ubuntu'){
    }
 
    stage('Build-and-Tag') {
-
       app = docker.build("winchesterka/zmeyka")
    }
 
-    stage('Pull-image-server'){
-
-        sh "docker-compose down"
-        sh "docker-compose up -d"
-     }
+   stage('Pull-image-server'){
+       sh "docker-compose down"
+       sh "docker-compose up -d"
+   }
 
 }
