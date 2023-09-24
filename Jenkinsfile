@@ -6,14 +6,9 @@ node ('ubuntu'){
 
    stage('Build-and-Tag') {
 
-      app = docker.build("gevda140/snake")
+      app = docker.build("winchesterka/zmeyka")
    }
-   stage('Post-to-dockerhub') {
 
-    docker.withRegistry(' https://registry.hub.docker.com/ ', 'dockerhub_creds') {
-            app. push("latest")
-                                }
-    }
     stage('Pull-image-server'){
 
         sh "docker-compose down"
