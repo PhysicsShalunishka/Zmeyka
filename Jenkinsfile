@@ -1,4 +1,3 @@
-pipeline {
 node('ubuntu') {
     def app 
     stage('Cloning Git') {
@@ -35,5 +34,4 @@ node('ubuntu') {
     stage('DAST') {
         build 'SECURITY-DAST-Arachni'
     }
-}
 }
