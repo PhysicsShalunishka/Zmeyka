@@ -5,7 +5,7 @@ node('ubuntu') {
         checkout scm
     }
 
-     stage('SAST') {
+     stage('SCA') {
         build 'SCA-SAST-SNYK'
     }
 
